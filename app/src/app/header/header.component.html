@@ -1,0 +1,143 @@
+
+
+<header          class="header">
+<div class="header__cont test">
+<img src="/assets/logo.png.crdownload" alt="">
+
+<div class="header__cont__nav">
+
+<li  *ngFor="let item of nav"   >
+    <a   (mouseover)="navActive(item)"    href="#">{{item.name}}</a>
+  
+</li>
+
+
+
+
+  
+<button> <i class="fa fa-user" aria-hidden="true"></i>       Sign in</button>
+
+
+
+</div>
+
+
+</div>
+
+<div  [class.active]="isSelectedActive"   (mouseleave)="remove()"   [ngClass]="isSelected.name === 'buy'?'buy':''  ||   isSelected.name === 'rent'?'rent':''           || isSelected.name === 'find agent'?'find':''  ||  isSelected.name === 'house prices'?'house':''  ||  isSelected.name === 'commercial'?'commercial':'' ||  isSelected.name === 'inspire'?'inspire':''   ||  isSelected.name === 'overseas'?'overseas':''          " class="detail">
+
+
+
+  
+<div          class="detail__box">
+
+<div  [ngClass]="isSelected.name === 'buy'?'buy    animate__animated animate__fadeInLeft      ':''" class="detail__box__buy">
+
+<li><a (click)="forSale('for sale')" href="#">Property for sale</a></li>
+<li><a href="#">Property valuation</a></li>
+<li><a href="#">New home for sale</a></li>
+<li><a href="#">Investors</a></li>
+<li><a href="#">Where can I live</a></li>
+<li><a href="#">Mortgages</a></li>
+
+
+
+</div>
+<div   [ngClass]="isSelected.name === 'rent'?'rent    animate__animated animate__fadeInUp ':''"     class="detail__box__rent">
+
+
+    <li><a href="#">Property for rent</a></li>
+    <li><a href="#">Student property to rent</a></li>
+    <li><a href="#">Where can I live</a></li>
+
+
+
+
+</div>
+
+
+
+<div  [ngClass]="isSelected.name === 'find agent'?'find  animate__animated animate__fadeInUp      ':''"     class="detail__box__find">
+
+
+    <li><a href="#">Find estate agents</a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+
+</div>
+<div        [ngClass]="isSelected.name === 'house prices'?'house  animate__animated animate__fadeInUp   ':''"           class="detail__box__house">
+
+
+    <li><a href="#">Sold house prices</a></li>
+    <li><a href="#">Price comparison report</a></li>
+    <li><a href="#">Property valuation</a></li>
+    <li><a href="#">Market trends</a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+
+
+</div>
+<div     [ngClass]="isSelected.name === 'commercial'?'commercial  animate__animated animate__fadeInUp   ':''"           class="detail__box__commercial">
+
+
+
+
+    <li><a href="#">Commercial property to rent</a></li>
+    <li><a href="#">Commercial property for sale</a></li>
+    <li><a href="#">Advertise commercial property</a></li>
+
+
+
+
+</div>
+<div     [ngClass]="isSelected.name === 'inspire'?'inspire  animate__animated animate__fadeInUp  ':''"          class="detail__box__inspire">
+
+
+    <li><a href="#">Moving stories</a></li>
+    <li><a href="#">Property guides</a></li>
+    <li><a href="#">Overseas blog</a></li>
+    <li><a href="#">Property blog</a></li>
+    <li><a href="#">Housing trends</a></li>
+    <li><a href="#">Country guides</a></li>
+    <li><a href="#">View our latest campaign</a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+
+
+
+</div>
+
+<div   [ngClass]="isSelected.name === 'overseas'?'overseas  animate__animated animate__fadeInRight      ':''"            class="detail__box__overseas">
+
+
+
+
+    <li><a href="#">All countries</a></li>
+    <li><a href="#">Portugal</a></li>
+    <li><a href="#">Currency</a></li>
+    <li><a href="#">Spain</a></li>
+    <li><a href="#">Italy</a></li>
+    <li><a class="a" href="#">Sell overseas property</a></li>
+    <li><a href="#">France</a></li>
+    <li><a href="#">Greece</a></li>
+    <li><a href="#"></a></li>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+</header>
+
+
+
